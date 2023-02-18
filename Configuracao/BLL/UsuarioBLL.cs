@@ -35,7 +35,8 @@ namespace BLL
         }
         public void Excluir (int _id)
         {
-          
+          UsuarioDAL usuarioDAL = new UsuarioDAL();
+            usuarioDAL.Excluir (_id); 
         }
     }
 }

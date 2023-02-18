@@ -46,11 +46,11 @@ namespace DAL
         }
         public void Alterar(Usuario _usuario)
         {
-
+               
         }
         public void Excluir(int _id)
         {
-
+          
         }
              
 
