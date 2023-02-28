@@ -7,7 +7,7 @@ namespace DAL
     {
         public void Inserir(Permissao permissao)
         {
-            SqlConnection cn = new SqlConnection();
+            SqlConnection cn = new SqlConnection(); 
 
             try
             {
