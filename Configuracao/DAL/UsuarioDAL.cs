@@ -1,4 +1,5 @@
 ﻿using Models;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace DAL
@@ -29,7 +30,7 @@ namespace DAL
 
                 cn.Open();
                 cmd.ExecuteScalar();
-                
+
             }
             catch (Exception ex)
             {
@@ -42,8 +43,57 @@ namespace DAL
         }
         public Usuario BuscarPorNomeUsuario(string _nomeUsuario)
         {
-            return new Usuario();
-        }
+            Usuario usuario = new Usuario();
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+           
+
+            try
+            {
+                cn.ConnectionString = Conexao.StringDeConexao;
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome, CPF, Email, Ativo
+                                      FROM Usuario WHERE NomeUsuario = @NomeUsuario";
+
+                cmd.Parameters.AddWithValue("@NomeUsuario", _nomeUsuario);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        usuario = new Usuario();
+                        usuario.Id = usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.Nome = rd["Nome"].ToString();
+                        usuario.NomeUsuario = rd["NomeUsuario"].ToString();
+                        usuario.CPF = rd["CPF"].ToString();
+                        usuario.Email = rd["Email"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                    }
+                    else
+                    {
+                        throw new Exception("Usuário não encotrado.");
+
+                    }
+
+                }
+                return usuario;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception ("Ocorreu um erro ao tentar buscar usuário: " + ex.Message);
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+    
+    }
         public List<Usuario> BuscarTodos()
         {
             List<Usuario> usuarios = new List<Usuario>();
