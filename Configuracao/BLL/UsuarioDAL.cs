@@ -25,5 +25,10 @@ namespace BLL
         {
             throw new NotImplementedException();
         }
+
+        internal void Inserir(Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
