@@ -11,43 +11,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppPrincipal
 {
-    public partial class G : Form
+    public partial class FormPrincipal : Form
     {
-        public G()
+        public FormPrincipal ()
         {
             InitializeComponent();
         }
-           private void button1_Click(object sender, EventArgs e)
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Milena");
-        }
-
-        private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void grupoUsuariosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            UsuarioBLL usuarioBLL = new UsuarioBLL();
-            usuarioBindingSource.DataSource = usuarioBLL.BuscarTodos();
-
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
+            using (FormBuscarUsuarios frm = new FormBuscarUsuarios())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }
