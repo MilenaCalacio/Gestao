@@ -80,6 +80,7 @@
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(287, 26);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // grupoDeUsuáriosToolStripMenuItem
             // 
@@ -105,11 +106,11 @@
             this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(287, 26);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
-            // G
+            // FormPrincipal
             // 
             this.ClientSize = new System.Drawing.Size(1252, 451);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "G";
+            this.Name = "FormPrincipal";
             this.Text = "Gestao";
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuariosBindingSource)).EndInit();

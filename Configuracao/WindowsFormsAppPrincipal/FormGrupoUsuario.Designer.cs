@@ -51,11 +51,11 @@
             this.grupoUsuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
             this.grupoUsuariosDataGridView.DataSource = this.grupoUsuariosBindingSource;
-            this.grupoUsuariosDataGridView.Location = new System.Drawing.Point(13, 66);
+            this.grupoUsuariosDataGridView.Location = new System.Drawing.Point(13, 67);
             this.grupoUsuariosDataGridView.Name = "grupoUsuariosDataGridView";
             this.grupoUsuariosDataGridView.RowHeadersWidth = 51;
             this.grupoUsuariosDataGridView.RowTemplate.Height = 24;
-            this.grupoUsuariosDataGridView.Size = new System.Drawing.Size(735, 212);
+            this.grupoUsuariosDataGridView.Size = new System.Drawing.Size(558, 180);
             this.grupoUsuariosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -73,7 +73,7 @@
             // buttonExluir
             // 
             this.buttonExluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExluir.Location = new System.Drawing.Point(658, 37);
+            this.buttonExluir.Location = new System.Drawing.Point(481, 37);
             this.buttonExluir.Name = "buttonExluir";
             this.buttonExluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExluir.TabIndex = 2;
@@ -83,7 +83,7 @@
             // buttonAdicionar
             // 
             this.buttonAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdicionar.Location = new System.Drawing.Point(496, 38);
+            this.buttonAdicionar.Location = new System.Drawing.Point(319, 38);
             this.buttonAdicionar.Name = "buttonAdicionar";
             this.buttonAdicionar.Size = new System.Drawing.Size(75, 23);
             this.buttonAdicionar.TabIndex = 3;
@@ -96,13 +96,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(13, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(337, 22);
+            this.textBox1.Size = new System.Drawing.Size(160, 22);
             this.textBox1.TabIndex = 4;
             // 
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAlterar.Location = new System.Drawing.Point(577, 38);
+            this.buttonAlterar.Location = new System.Drawing.Point(400, 38);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 5;
@@ -112,7 +112,7 @@
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(369, 38);
+            this.buttonBuscar.Location = new System.Drawing.Point(192, 38);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 6;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 430);
+            this.ClientSize = new System.Drawing.Size(653, 398);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.textBox1);
