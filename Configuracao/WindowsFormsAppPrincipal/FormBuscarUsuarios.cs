@@ -19,5 +19,14 @@ namespace WindowsFormsAppPrincipal
             UsuarioBLL usuarioBLL = new UsuarioBLL();
             usuarioBindingSource.DataSource = usuarioBLL.BuscarTodos();
         }
+
+        private void buttonAdicionarUsuario_Click(object sender, EventArgs e)
+        {
+            using(FormCadastroUsuario Frm = new FormCadastroUsuario())
+            {
+                Frm.ShowDialog();
+            }
+            buttonBuscar_Click(sender, e);
+        }
     }
 }

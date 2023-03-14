@@ -73,11 +73,7 @@ namespace DAL
                         usuario.Email = rd["Email"].ToString();
                         usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
                     }
-                    else
-                    {
-                        throw new Exception("Usuário não encotrado.");
-
-                    }
+                   
 
                 }
                 return usuario;
@@ -131,11 +127,7 @@ namespace DAL
                 }
             }
             catch (Exception ex)
-            {
-                //  Console.WriteLine(String.Format("Ocorreu o seguinte erro:{0} ao tentar buscar no banco"));
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários: ");
-            }
-            finally
+ 
             {
                 cn.Close();
             }

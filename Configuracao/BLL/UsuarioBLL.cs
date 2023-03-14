@@ -25,7 +25,7 @@ namespace BLL
 
         }  
 
-          public void Inserir (Usuario _usuario)
+          public void Inserir (Usuario _usuario, string _confirmacaoDes)
         { 
             ValidarDados(_usuario);
 
