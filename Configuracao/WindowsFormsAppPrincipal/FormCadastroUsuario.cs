@@ -14,9 +14,18 @@ namespace WindowsFormsAppPrincipal
 {
     public partial class FormCadastroUsuario : Form
     {
-        public FormCadastroUsuario()
+        private bool alterar;
+
+        public FormCadastroUsuario(bool _alterar = false, int _id = 0)
         {
             InitializeComponent();
+            alterar = _alterar;
+
+            if( alterar )
+            {   UsuarioBLL usuarioBLL = new UsuarioBLL();
+                usuarioBindingSource.DataSource = usuarioBLL.BuscarPorId(_id);
+            }
+
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -31,7 +40,10 @@ namespace WindowsFormsAppPrincipal
             try
             {
                 usuarioBindingSource.EndEdit();
-                usuarioBLL.Inserir((Usuario)usuarioBindingSource.Current);
+                if(!alterar)
+                usuarioBLL.Inserir((Usuario)usuarioBindingSource.Current,confirmacaoTextBox.Text);
+                else
+                usuarioBLL.Alterar((Usuario)usuarioBindingSource.Current, confirmacaoTextBox.Text);
                 MessageBox.Show("Registro salvo com sucesso!");
                 Close();
 
@@ -48,6 +60,7 @@ namespace WindowsFormsAppPrincipal
 
         private void FormCadastroUsuario_Load(object sender, EventArgs e)
         {
+            if (!alterar)
             usuarioBindingSource.AddNew();
         }
     }

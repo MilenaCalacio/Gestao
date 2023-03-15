@@ -8,6 +8,8 @@ namespace DAL
 {
     public class UsuarioDAL
     {
+        private SqlConnection cn;
+
         public void Inserir(Usuario _usuario)
         {
             SqlConnection cn = new SqlConnection();
@@ -92,6 +94,7 @@ namespace DAL
 
     
     }
+      
         public List<Usuario> BuscarTodos()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -135,12 +138,45 @@ namespace DAL
         }
         public void Alterar(Usuario _usuario)
         {
-               
+            try
+            {
+                cn.ConnectionString = Conexao.StringDeConexao;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+
+                cmd.CommandText = @"UPDATE Usuario SET Nome= @Nome, NomeUsuario =@NomeUsuario
+                                     @Nome,@NomeUsuario,@CPF,@Email,@Senha,@Ativo";
+
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", _usuario.Nome);
+                cmd.Parameters.AddWithValue("@NomeUsuario", _usuario.NomeUsuario);
+                cmd.Parameters.AddWithValue("@CPF", _usuario.CPF);
+                cmd.Parameters.AddWithValue("@Email", _usuario.Email);
+                cmd.Parameters.AddWithValue("@Senha", _usuario.Senha);
+                cmd.Parameters.AddWithValue("@Ativo", _usuario.Ativo);
+
+                cn.Open();
+                cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar inserir um usuário no banco: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
         public void Excluir(int _id)
         {
           
         }
-            
+
+        public Usuario BuscarPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
