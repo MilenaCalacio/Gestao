@@ -58,6 +58,12 @@
     <Compile Include="FormCadastroUsuario.Designer.cs">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultaGrupoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaGrupoUsuario.Designer.cs">
+      <DependentUpon>FormConsultaGrupoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGrupoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaGrupoUsuario.resx">
+      <DependentUpon>FormConsultaGrupoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGrupoUsuario.resx">
       <DependentUpon>FormGrupoUsuario.cs</DependentUpon>

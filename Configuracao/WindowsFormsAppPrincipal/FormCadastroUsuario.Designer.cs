@@ -36,7 +36,6 @@
             System.Windows.Forms.Label senhaLabel;
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.cPFTextBox = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.confirmacaoTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -102,31 +102,30 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSalvar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonSalvar.Location = new System.Drawing.Point(527, 251);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
             this.buttonSalvar.TabIndex = 0;
             this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonCancelar.Location = new System.Drawing.Point(620, 251);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 1;
             this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(10, 81);
             this.nomeTextBox.Name = "nomeTextBox";
@@ -135,6 +134,7 @@
             // 
             // emailTextBox
             // 
+            this.emailTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Email", true));
             this.emailTextBox.Location = new System.Drawing.Point(252, 81);
             this.emailTextBox.Name = "emailTextBox";
@@ -143,6 +143,7 @@
             // 
             // cPFTextBox
             // 
+            this.cPFTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "CPF", true));
             this.cPFTextBox.Location = new System.Drawing.Point(481, 81);
             this.cPFTextBox.Name = "cPFTextBox";
@@ -161,6 +162,7 @@
             // 
             // nomeUsuarioTextBox
             // 
+            this.nomeUsuarioTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "NomeUsuario", true));
             this.nomeUsuarioTextBox.Location = new System.Drawing.Point(9, 138);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
@@ -169,6 +171,7 @@
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
             this.senhaTextBox.Location = new System.Drawing.Point(252, 138);
             this.senhaTextBox.Name = "senhaTextBox";
@@ -177,6 +180,7 @@
             // 
             // confirmacaoTextBox
             // 
+            this.confirmacaoTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.confirmacaoTextBox.Location = new System.Drawing.Point(458, 138);
             this.confirmacaoTextBox.Name = "confirmacaoTextBox";
             this.confirmacaoTextBox.Size = new System.Drawing.Size(172, 22);
@@ -193,6 +197,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(0, 0);
@@ -200,11 +205,17 @@
             this.textBox2.Size = new System.Drawing.Size(715, 43);
             this.textBox2.TabIndex = 17;
             this.textBox2.Text = " Cadastro de usuário";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // FormCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(715, 294);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);

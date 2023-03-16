@@ -171,10 +171,16 @@ namespace DAL
         }
         public void Excluir(int _id)
         {
-          
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            usuarioBLL.Excluir(_id);
         }
 
         public Usuario BuscarPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AdicionarGrupo(int idUsuario, int idGrupoUsuario)
         {
             throw new NotImplementedException();
         }

@@ -131,6 +131,8 @@
             this.Controls.Add(this.buttonExluir);
             this.Controls.Add(this.grupoUsuariosDataGridView);
             this.Name = "FormGrupoUsuario";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "FormGrupoUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuariosBindingSource)).EndInit();
