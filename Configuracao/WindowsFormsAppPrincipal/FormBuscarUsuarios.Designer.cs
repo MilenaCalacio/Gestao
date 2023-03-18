@@ -240,6 +240,7 @@
             this.buttonExcluirGrupoUsuario.TabIndex = 6;
             this.buttonExcluirGrupoUsuario.Text = "Excluir";
             this.buttonExcluirGrupoUsuario.UseVisualStyleBackColor = false;
+            this.buttonExcluirGrupoUsuario.Click += new System.EventHandler(this.buttonExcluirGrupoUsuario_Click);
             // 
             // buttonAdicionarGrupoUsuario
             // 
@@ -251,6 +252,7 @@
             this.buttonAdicionarGrupoUsuario.TabIndex = 7;
             this.buttonAdicionarGrupoUsuario.Text = "Adicionar";
             this.buttonAdicionarGrupoUsuario.UseVisualStyleBackColor = false;
+            this.buttonAdicionarGrupoUsuario.Click += new System.EventHandler(this.buttonAdicionarGrupoUsuario_Click);
             // 
             // FormBuscarUsuarios
             // 

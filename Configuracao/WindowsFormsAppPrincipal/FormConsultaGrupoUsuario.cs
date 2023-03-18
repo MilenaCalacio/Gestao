@@ -26,5 +26,10 @@ namespace WindowsFormsAppPrincipal
 
             grupoUsuarioBindingSource.DataSource = grupoUsuarioBLL.BuscarPorNomeGrupoUsuario(textBoxBuscar.Text);
         }
+
+        private void FormConsultaGrupoUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

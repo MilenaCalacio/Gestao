@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using BLL;
 using System;
-
+using System.Linq.Expressions;
 
 namespace WindowsFormsAppPrincipal
 {
@@ -38,6 +38,11 @@ namespace WindowsFormsAppPrincipal
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
+            if (usuarioBindingSource.Count <= 0)
+            {
+                MessageBox.Show("Não existe registro para ser excluído");
+            }
+
             int id = ((Usuario)usuarioBindingSource.Current).Id;
             using (FormCadastroUsuario frm = new FormCadastroUsuario(true, id))
             {
@@ -67,6 +72,17 @@ namespace WindowsFormsAppPrincipal
             MessageBox.Show("Rsgistro excluído com sucesso!");
             buttonBuscar_Click(null, null);
 
+        }
+
+        private void buttonAdicionarGrupoUsuario_Click(object sender, EventArgs e)
+        {
+     
+
+        }
+
+        private void buttonExcluirGrupoUsuario_Click(object sender, EventArgs e)
+        {
+   
         }
     }
 }

@@ -28,6 +28,8 @@ namespace WindowsFormsAppPrincipal
 
         }
 
+        public int Id { get; internal set; }
+
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();

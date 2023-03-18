@@ -171,8 +171,7 @@ namespace DAL
         }
         public void Excluir(int _id)
         {
-            UsuarioBLL usuarioBLL = new UsuarioBLL();
-            usuarioBLL.Excluir(_id);
+           
         }
 
         public Usuario BuscarPorId(int id)
@@ -181,6 +180,11 @@ namespace DAL
         }
 
         public void AdicionarGrupo(int idUsuario, int idGrupoUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ExisteRelacionamento(int idUsuario, object id_GrupoUsuario)
         {
             throw new NotImplementedException();
         }

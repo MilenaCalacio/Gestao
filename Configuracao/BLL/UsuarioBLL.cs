@@ -2,6 +2,7 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BLL
@@ -9,6 +10,9 @@ namespace BLL
     public class UsuarioBLL
     {
         private string _confirmacaoDeSenha;
+        private object _idusuario;
+        private object _Id_GrupoUsuario;
+        private object id_GrupoUsuario;
 
         public void ValidarDados(Usuario _usuario, string confirmacaoDeSenha)
         {
@@ -80,8 +84,45 @@ namespace BLL
         }
         public void AdicionarGrupo (int _idUsuario, int _idGrupoUsuario)
         {
+            if (new UsuarioDAL().ExisteRelacionamento(_idUsuario, id_GrupoUsuario);
+            return;
+
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.AdicionarGrupo(_idUsuario, _idGrupoUsuario);
         }
+
+        public void RemoverGrupoUsuario(int idUsuario, int idGrupoUsuario)
+        {
+            SqlConnection cn = new SqlConnection();
+
+            try
+            {
+                cn.ConnectionString = Conexao.StringDeConexao;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+
+                cmd.CommandText = @"DELETE FROM UsuarioGrupoUsuario
+                                      WHERE Id_Usuario = @Id_Usuario
+                                   AND Id_GrupoUsuario = @Id_GrupoUsuario";
+
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id_usuario", _idusuario);
+                cmd.Parameters.AddWithValue("@Id_GrupoUsuario", _Id_GrupoUsuario);
+
+
+                cn.Open();
+                cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar inserir um usuário no banco: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
-}
+    }
