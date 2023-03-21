@@ -36,10 +36,10 @@ namespace BLL
             grupoUsuarioDal.Alterar(_alterar);
         }
 
-        public void Excluir(GrupoUsuario _excluir)
+        public void Excluir(int _id)
         {
             GrupoUsuarioDal grupoUsuarioDal = new GrupoUsuarioDal();
-            grupoUsuarioDal.Excluir(_excluir);
+            grupoUsuarioDal.Excluir(_id);
         }
 
         public GrupoUsuario BuscarPorNomeGrupoUsuario(string _nomeGrupoUsuario)
@@ -57,7 +57,12 @@ namespace BLL
             GrupoUsuarioDal grupoUsuarioDAL = new GrupoUsuarioDal();
             return grupoUsuarioDAL.BuscarTodos();
         }
+        public GrupoUsuario BuscarPorId(int _id)
+        {
+            GrupoUsuarioDal grupoUsuarioDAL = new GrupoUsuarioDal();
+            return grupoUsuarioDAL.BuscarPorId(_id);
 
+        }
 
 
     }
