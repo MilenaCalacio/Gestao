@@ -221,7 +221,8 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.Connection = cn;
-                cmd.CommandText = @"Delete From Usuario where id = @id;";
+                cmd.CommandText = @"DELETE FROM UsuarioGrupoUsuario WHERE Id_Usuario = @Id
+                                    DELETE FROM Usuario WHERE Id = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 //  cmd.Parameters.AddWithValue("@Descricao", _excluir.Descricao);
@@ -363,6 +364,7 @@ namespace DAL
             }
         }
         public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)
+
         {
 
             SqlConnection cn = new SqlConnection();
@@ -394,6 +396,7 @@ namespace DAL
             }
 
         }
+       
 
     }
 }
