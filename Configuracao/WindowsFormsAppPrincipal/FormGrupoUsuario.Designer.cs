@@ -55,7 +55,7 @@
             this.grupoUsuariosDataGridView.Name = "grupoUsuariosDataGridView";
             this.grupoUsuariosDataGridView.RowHeadersWidth = 51;
             this.grupoUsuariosDataGridView.RowTemplate.Height = 24;
-            this.grupoUsuariosDataGridView.Size = new System.Drawing.Size(558, 180);
+            this.grupoUsuariosDataGridView.Size = new System.Drawing.Size(557, 165);
             this.grupoUsuariosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -73,22 +73,24 @@
             // buttonExluir
             // 
             this.buttonExluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExluir.Location = new System.Drawing.Point(481, 37);
+            this.buttonExluir.Location = new System.Drawing.Point(480, 37);
             this.buttonExluir.Name = "buttonExluir";
             this.buttonExluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExluir.TabIndex = 2;
             this.buttonExluir.Text = "Excluir";
             this.buttonExluir.UseVisualStyleBackColor = true;
+            this.buttonExluir.Click += new System.EventHandler(this.buttonExluir_Click);
             // 
             // buttonAdicionar
             // 
             this.buttonAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdicionar.Location = new System.Drawing.Point(319, 38);
+            this.buttonAdicionar.Location = new System.Drawing.Point(318, 38);
             this.buttonAdicionar.Name = "buttonAdicionar";
             this.buttonAdicionar.Size = new System.Drawing.Size(75, 23);
             this.buttonAdicionar.TabIndex = 3;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
             // textBox1
             // 
@@ -96,34 +98,36 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(13, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
+            this.textBox1.Size = new System.Drawing.Size(159, 22);
             this.textBox1.TabIndex = 4;
             // 
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAlterar.Location = new System.Drawing.Point(400, 38);
+            this.buttonAlterar.Location = new System.Drawing.Point(399, 38);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 5;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(192, 38);
+            this.buttonBuscar.Location = new System.Drawing.Point(191, 38);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 6;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // FormGrupoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 398);
+            this.ClientSize = new System.Drawing.Size(652, 383);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.textBox1);

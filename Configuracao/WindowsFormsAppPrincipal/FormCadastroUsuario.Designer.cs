@@ -37,6 +37,7 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.cPFTextBox = new System.Windows.Forms.TextBox();
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
@@ -45,7 +46,6 @@
             this.confirmacaoTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
@@ -132,6 +132,10 @@
             this.nomeTextBox.Size = new System.Drawing.Size(217, 22);
             this.nomeTextBox.TabIndex = 4;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
+            // 
             // emailTextBox
             // 
             this.emailTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -197,7 +201,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(0, 0);
@@ -206,10 +210,6 @@
             this.textBox2.TabIndex = 17;
             this.textBox2.Text = " Cadastro de usuário";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // FormCadastroUsuario
             // 

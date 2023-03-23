@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grupoUsuarioDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grupoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupoUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,19 @@
             this.grupoUsuarioDataGridView.Size = new System.Drawing.Size(672, 295);
             this.grupoUsuarioDataGridView.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "NomeGrupo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Grupos de usuário";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // grupoUsuarioBindingSource
+            // 
+            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
+            // 
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -70,6 +83,7 @@
             this.buttonCancelar.TabIndex = 2;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSelecionar
             // 
@@ -80,6 +94,7 @@
             this.buttonSelecionar.TabIndex = 3;
             this.buttonSelecionar.Text = "Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = false;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // textBoxBuscar
             // 
@@ -110,19 +125,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Consultar grupos de usuários";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NomeGrupo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Grupos de usuário";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // grupoUsuarioBindingSource
-            // 
-            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
             // 
             // FormConsultaGrupoUsuario
             // 
